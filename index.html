@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ja" class="pc win webkit mouse">
+
+<head>
+    <meta charset="utf-8">
+    <title>AnimeMangaFan动漫协会 | 成立于北京交通大学海滨学院的学生组织</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://animemangafan.cn">
+    <link rel="icon" href="./favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./touchIcon.png">
+    <meta name="viewport" content="width=400">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="description"
+        content="AnimeMangaFan动漫协会 | 成立于北京交通大学海滨学院的学生组织">
+    <link rel="stylesheet" href="./lib/site.css">
+    <link rel="stylesheet" href="./root/root.css">
+    <link rel="stylesheet" href="./lib/mplus.css">
+    <style>
+        [v-cloak] {
+            display: none
+        }
+    </style>
+    <script src="./lib/lib.js" defer=""></script>
+    <script>
+        // 获取用户代理字符串
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // 判断是否为移动端设备
+        var isMobile = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile/.test(userAgent);
+
+        // 判断是否为电脑端设备
+        var isDesktop = !isMobile;
+
+        // 根据设备类型进行跳转
+        if (isMobile) {
+            // 移动端设备，跳转到移动端页面
+            window.location.href = 'index_m.html';
+        } else if (isDesktop) {
+            // 电脑端设备，跳转到电脑端页面
+            // window.location.href = 'index.html';
+        }
+    </script>
+    <style id="pp_style">
+        :root {
+            --color-primary: #306eff;
+            --color-primary-hover: #4a80ff;
+            --color-primary-active: #175cff;
+            --color-primary-disabled: rgba(48, 110, 255, 0.5);
+            --el-color-error: #ff663b;
+        }
+
+        #no-select {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
+        a.pp-restore-icon {
+            --size: 24px;
+            height: var(--size) !important;
+            width: var(--size) !important;
+            display: inline-block;
+            vertical-align: middle !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            z-index: 9999999999 !important;
+            cursor: pointer !important;
+            background-color: transparent !important;
+            position: relative;
+        }
+
+        a.pp-restore-icon::after,
+        a.pp-restore-icon::before {
+            display: none;
+        }
+
+        a.pp-restore-icon div {
+            margin: 0 !important;
+        }
+
+        a.pp-restore-icon::before,
+        a.pp-restore-icon::after {
+            display: none !important;
+        }
+
+        a.pp-restore-icon:hover .pp-tip {
+            display: block;
+        }
+
+        a.pp-restore-icon:hover .pp-icon {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+        }
+
+        a.pp-restore-icon .pp-icon {
+            height: var(--size);
+            width: var(--size);
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+        }
+
+        a.pp-restore-icon .pp-tip {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+            border-bottom-right-radius: 4px;
+            border-left: none;
+            border-top-right-radius: 4px;
+            border: 1px solid #306eff;
+            box-sizing: border-box;
+            color: #306eff;
+            display: none;
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 400;
+            height: var(--size);
+            line-height: calc(var(--size) - 2px);
+            padding: 0 4px !important;
+            position: fixed;
+            z-index: 9999999999;
+            white-space: nowrap;
+        }
+
+        #pp_context_menu {
+            --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            position: fixed;
+            background: #fff;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 0;
+            transition: opacity var(--transition);
+            z-index: 9999999999;
+        }
+
+        #pp_context_menu li {
+            cursor: default;
+            border-radius: 4px;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            height: 48px;
+            line-height: 48px;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            white-space: nowrap;
+        }
+
+        #pp_context_menu li:hover {
+            background: #F2F3F4;
+        }
+
+        #pp_landing_page {
+            display: none;
+            position: fixed;
+            z-index: 9999999999;
+            top: 16px;
+            right: 26px;
+            width: 380px;
+            height: 520px;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+            background: #fff;
+        }
+
+        #pp_close_landing_page {
+            display: none;
+            position: fixed;
+            z-index: 9999999999;
+            top: 32px;
+            right: 42px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        #pp_modal {
+            width: 640px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            border: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-style: normal !important;
+        }
+
+        #pp_modal_wrap {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999999999;
+        }
+
+        #pp_modal_wrap * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 14px;
+            font-variant: tabular-nums;
+            font-feature-settings: 'tnum';
+            transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        #pp_modal_wrap a {
+            display: inline-block;
+            text-decoration: none !important;
+            cursor: pointer !important;
+        }
+
+        #pp_modal .pp_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #pp_modal_title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        #pp_modal_close {
+            width: 24px;
+            height: 24px;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+        }
+
+        #pp_modal_body {
+            padding: 24px 0 32px;
+        }
+
+        #pp_modal_input {
+            width: 100%;
+            background: #F2F3F4;
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: 14px;
+            padding: 12px 16px;
+            border: none;
+            resize: none;
+            outline: none;
+        }
+
+        #pp_modal_valid_message {
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #ff663b;
+            position: absolute;
+            line-height: 26px;
+            height: 26px;
+            max-width: 576px;
+        }
+
+        #pp_modal .pp_footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        #pp_modal_cancel {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            padding: 0 16px;
+            line-height: 36px;
+            height: 36px;
+        }
+
+        #pp_modal_cancel:hover {
+            background: #f5f7fa;
+        }
+
+        #pp_modal_confirm {
+            min-width: 120px;
+            line-height: 36px;
+            height: 36px;
+            padding: 0 16px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 4px;
+            text-align: center;
+            display: flex !important;
+            align-items: center;
+            margin-left: 16px;
+            background: #306eff;
+        }
+
+        #pp_modal_confirm:hover {
+            background: #4a80ff;
+        }
+
+        #pp_modal_confirm:active {
+            background: #175cff;
+        }
+
+        #pp_modal_confirm.disabled,
+        #pp_modal_confirm:disabled {
+            background: rgba(48, 110, 255, 0.5);
+            opacity: 0.5;
+        }
+
+        #pp_modal_confirm_icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+        }
+    </style>
+    <style id="pp_style">
+        :root {
+            --color-primary: #306eff;
+            --color-primary-hover: #4a80ff;
+            --color-primary-active: #175cff;
+            --color-primary-disabled: rgba(48, 110, 255, 0.5);
+            --el-color-error: #ff663b;
+        }
+
+        #no-select {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
+        a.pp-restore-icon {
+            --size: 24px;
+            height: var(--size) !important;
+            width: var(--size) !important;
+            display: inline-block;
+            vertical-align: middle !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            z-index: 9999999999 !important;
+            cursor: pointer !important;
+            background-color: transparent !important;
+            position: relative;
+        }
+
+        a.pp-restore-icon::after,
+        a.pp-restore-icon::before {
+            display: none;
+        }
+
+        a.pp-restore-icon div {
+            margin: 0 !important;
+        }
+
+        a.pp-restore-icon::before,
+        a.pp-restore-icon::after {
+            display: none !important;
+        }
+
+        a.pp-restore-icon:hover .pp-tip {
+            display: block;
+        }
+
+        a.pp-restore-icon:hover .pp-icon {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+        }
+
+        a.pp-restore-icon .pp-icon {
+            height: var(--size);
+            width: var(--size);
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+        }
+
+        a.pp-restore-icon .pp-tip {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+            border-bottom-right-radius: 4px;
+            border-left: none;
+            border-top-right-radius: 4px;
+            border: 1px solid #306eff;
+            box-sizing: border-box;
+            color: #306eff;
+            display: none;
+            font-size: 9px;
+            font-style: normal;
+            font-weight: 400;
+            height: var(--size);
+            line-height: calc(var(--size) - 2px);
+            padding: 0 4px !important;
+            position: fixed;
+            z-index: 9999999999;
+            white-space: nowrap;
+        }
+
+        #pp_context_menu {
+            --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            position: fixed;
+            background: #fff;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 0;
+            transition: opacity var(--transition);
+            z-index: 9999999999;
+        }
+
+        #pp_context_menu li {
+            cursor: default;
+            border-radius: 4px;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            height: 48px;
+            line-height: 48px;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            white-space: nowrap;
+        }
+
+        #pp_context_menu li:hover {
+            background: #F2F3F4;
+        }
+
+        #pp_landing_page {
+            display: none;
+            position: fixed;
+            z-index: 9999999999;
+            top: 16px;
+            right: 26px;
+            width: 380px;
+            height: 520px;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+            background: #fff;
+        }
+
+        #pp_close_landing_page {
+            display: none;
+            position: fixed;
+            z-index: 9999999999;
+            top: 32px;
+            right: 42px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        #pp_modal {
+            width: 640px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            border: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-style: normal !important;
+        }
+
+        #pp_modal_wrap {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999999999;
+        }
+
+        #pp_modal_wrap * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 14px;
+            font-variant: tabular-nums;
+            font-feature-settings: 'tnum';
+            transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        #pp_modal_wrap a {
+            display: inline-block;
+            text-decoration: none !important;
+            cursor: pointer !important;
+        }
+
+        #pp_modal .pp_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #pp_modal_title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        #pp_modal_close {
+            width: 24px;
+            height: 24px;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+        }
+
+        #pp_modal_body {
+            padding: 24px 0 32px;
+        }
+
+        #pp_modal_input {
+            width: 100%;
+            background: #F2F3F4;
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: 14px;
+            padding: 12px 16px;
+            border: none;
+            resize: none;
+            outline: none;
+        }
+
+        #pp_modal_valid_message {
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #ff663b;
+            position: absolute;
+            line-height: 26px;
+            height: 26px;
+            max-width: 576px;
+        }
+
+        #pp_modal .pp_footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        #pp_modal_cancel {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            padding: 0 16px;
+            line-height: 36px;
+            height: 36px;
+        }
+
+        #pp_modal_cancel:hover {
+            background: #f5f7fa;
+        }
+
+        #pp_modal_confirm {
+            min-width: 120px;
+            line-height: 36px;
+            height: 36px;
+            padding: 0 16px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 4px;
+            text-align: center;
+            display: flex !important;
+            align-items: center;
+            margin-left: 16px;
+            background: #306eff;
+        }
+
+        #pp_modal_confirm:hover {
+            background: #4a80ff;
+        }
+
+        #pp_modal_confirm:active {
+            background: #175cff;
+        }
+
+        #pp_modal_confirm.disabled,
+        #pp_modal_confirm:disabled {
+            background: rgba(48, 110, 255, 0.5);
+            opacity: 0.5;
+        }
+
+        #pp_modal_confirm_icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+        }
+    </style>
+</head>
+
+<body class="en" page="root" mq="pc">
+    <div class="Page">
+        <header>
+            <div id="top" lang="en" class="Header">
+                <div lang="en" class="language">
+                    <div class="language-en">AnimeMangaFan动漫协会官方网站</div>
+                    <div class="language-jp"><a href="https://www.czjtu.edu.cn/">沧州交通学院官网</a></div> <!---->
+                    <!---->
+                </div>
+                <div lang="ja" class="Header-logo"><a href="/">maimai でらっくす</a></div>
+                <div lang="en" class="Header-logo"><a href="/">maimai でらっくす</a></div>
+            </div>
+        </header>
+        <main role="main" data-page="root" class="Main">
+            <div class="Root">
+                <div class="MainVisual">
+                    <div class="MainVisual-inner">
+                        <div>
+                            <div class="MainVisual-logo">AnimeMangaFan动漫协会</div>
+                            <div class="MainVisual-chara"><!---->
+                                <div class="MainVisual-laundrysChara"></div>
+                                <div class="MainVisual-topChara">
+                                    <div data-el="asset" status="done" class="elAsset MainVisual-chara-top horz"><img
+                                            src="./storage/root/lighttosee.png" alt="莱图希" class="elAsset-image horz"></div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MainVisual-left">
+                            <div class="cab"></div>
+                            <div class="aime"><a href="#" class="event-top-aime">新規Aimeなら初回プレイ無料！</a></div>
+                        </div>
+                        <div class="MainVisual-right">
+                            <div class="kop5th">
+                                <a href="https://info.animemangafan.cn" target="_blank">加入我们</a>
+                            </div>
+                            <div class="release">
+                                <div class="bnrRelease show"><a href="#" class="event-top-newmusic">
+                                        <div class="bnrRelease-inner">
+                                            <br>
+                                            <span class="bnrRelease-inner-day">2024</span>
+                                            <span class="bnrRelease-inner-week">年</span><br>
+                                            <span class="bnrRelease-inner-count">龙</span>
+                                            <span class="bnrRelease-inner-text">年快乐!!</span>
+                                        </div> 
+                                        <span class="bnrRelease-inner-chara_l"></span> 
+                                        <span class="bnrRelease-inner-chara_r"></span>
+                                    </a></div>
+                            </div>
+                            <div class="release">
+                                <div class="bnrRelease show"><a href="#" class="event-top-newmusic">
+                                        <div class="bnrRelease-inner">
+                                            <br>
+                                            <span class="bnrRelease-inner-day">3/1</span>
+                                            <span class="bnrRelease-inner-week">(五)</span><br>
+                                            <span class="bnrRelease-inner-count">夏</span>
+                                            <span class="bnrRelease-inner-text">季学期!!</span>
+                                        </div> 
+                                        <span class="bnrRelease-inner-chara_l"></span> 
+                                        <span class="bnrRelease-inner-chara_r"></span>
+                                    </a></div>
+                            </div> <!---->
+                        </div>
+                    </div>
+                </div> <!---->
+                <div class="MainContents">
+                    <div>
+                        <div class="Bottombanner">
+                            <div class="banner maimainet">
+                                <a href="mailto:jubao@animemangafan.cn" target="_blank" class="event-top-net">举报邮箱</a>
+                            </div>
+                            <div class="banner line">
+                                <a href="https://space.bilibili.com/3494356457622376" target="_blank" class="event-top-line">官方B站绝赞更新中！</a>
+                            </div>
+                        </div>
+                        <h2 class="h2_news">おしらせ</h2>
+                        <div class="LatestNews">
+                            <div class="LatestNews-inner">
+                                <div class="LatestNews-box">
+                                    <a href="#" class="event-top-news">
+                                        <div class="LatestNews-inner-date">2024.02.10</div>
+                                        <h4 class="LatestNews-box-title">欢迎访问AMF动漫协会网站</h4>
+                                        <div class="LatestNews-box-thumbnail"
+                                            style="background-image: url(./assets/maiLatestNews/newsbg/wel.png);">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div> <!---->
+                            <div class="LatestNews-newslist">
+                                <a href="https://info.animemangafan.cn/" class="event-top-news" target="_blank">查看更多</a>
+                            </div>
+                        </div>
+                        <h2 class="h2_chara">看板娘</h2>
+                        <div class="Characters">
+                            <div class="container">
+                                <div class="otohime"><a href="#" class="event-top-character"></a>
+                                    <span class="name">莱图希</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <h2 class="h2_twitter">bilibili</h2>
+                        <br>
+                        <div class="Twitter">
+                            <div class="Twitter-button">
+                                <a href="https://space.bilibili.com/3494356457622376" target="_blank" class="btnMai"> 社团官方bilibili </a> 
+                                <a href="https://space.bilibili.com/356779065" target="_blank" class="btnGeki"> 学校官方Bilibili </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="OtherSiteBanner">
+                    <ul>
+                        <li><a href="https://www.czjtu.edu.cn" target="_blank">BJTUHBXY</a></li>
+                        <li><a href="https://www.bjtu.edu.cn" target="_blank">BJTU</a></li>
+                        <li><a href="http://jyt.hebei.gov.cn/" target="_blank">河北省教育厅</a></li>
+                        <li><a href="https://jw.beijing.gov.cn/" target="_blank">北京市教委</a></li>
+                        <li><a href="https://www.hebei.gov.cn/" target="_blank">河北省人民政府</a></li>
+                        <li><a href="http://www.moe.gov.cn/" target="_blank">中华人民共和国教育部</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <div class="dec-bg">
+            <div class="linear">
+                <div class="linear-inner">
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 189px; --linearDegree: 46%; --linearDelay: 0.8s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 245px; --linearDegree: 39%; --linearDelay: 1.8s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 212px; --linearDegree: 3%; --linearDelay: 1.7s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 250px; --linearDegree: 98%; --linearDelay: 1.6s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 268px; --linearDegree: 67%; --linearDelay: 0.3s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 138px; --linearDegree: 24%; --linearDelay: 2.0s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 247px; --linearDegree: 74%; --linearDelay: 0.8s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 174px; --linearDegree: 33%; --linearDelay: 1.1s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 166px; --linearDegree: 23%; --linearDelay: 0.4s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 276px; --linearDegree: 25%; --linearDelay: 1.4s;">
+                    </div>
+                    <div class="linear-image thunder_green"
+                        style="--linearColor: #fff; --linearHeight: 178px; --linearDegree: 73%; --linearDelay: 1.0s; --linearImageTop: 48%;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 187px; --linearDegree: 19%; --linearDelay: 0.1s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 180px; --linearDegree: 0%; --linearDelay: 0.3s;">
+                    </div>
+                    <div class="linear-image thunder_yellow"
+                        style="--linearColor: #fff; --linearHeight: 222px; --linearDegree: 76%; --linearDelay: 0.9s; --linearImageTop: 24%;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 236px; --linearDegree: 52%; --linearDelay: 0.0s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 182px; --linearDegree: 82%; --linearDelay: 1.4s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 296px; --linearDegree: 91%; --linearDelay: 1.3s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 215px; --linearDegree: 26%; --linearDelay: 1.1s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 157px; --linearDegree: 69%; --linearDelay: 1.6s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 179px; --linearDegree: 72%; --linearDelay: 0.1s;">
+                    </div>
+                    <div class="linear-image thunder_pink"
+                        style="--linearColor: #e84472; --linearHeight: 100px; --linearDegree: 47%; --linearDelay: 3.2s; --linearImageTop: 22%;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 295px; --linearDegree: 55%; --linearDelay: 2.5s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 246px; --linearDegree: 26%; --linearDelay: 2.3s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 206px; --linearDegree: 55%; --linearDelay: 3.8s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 254px; --linearDegree: 76%; --linearDelay: 5.6s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 151px; --linearDegree: 97%; --linearDelay: 2.3s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 148px; --linearDegree: 97%; --linearDelay: 1.1s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 104px; --linearDegree: 57%; --linearDelay: 5.9s;">
+                    </div>
+                    <div class="linear-image thunder_pink"
+                        style="--linearColor: #e84472; --linearHeight: 279px; --linearDegree: 39%; --linearDelay: 5.4s; --linearImageTop: 31%;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 249px; --linearDegree: 8%; --linearDelay: 1.1s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 266px; --linearDegree: 83%; --linearDelay: 2.0s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #fff; --linearHeight: 205px; --linearDegree: 68%; --linearDelay: 3.7s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 145px; --linearDegree: 28%; --linearDelay: 3.5s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 197px; --linearDegree: 66%; --linearDelay: 3.1s;">
+                    </div>
+                    <div class="linear-image thunder_pink"
+                        style="--linearColor: #e84472; --linearHeight: 224px; --linearDegree: 41%; --linearDelay: 5.2s; --linearImageTop: 38%;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 192px; --linearDegree: 62%; --linearDelay: 2.7s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #e84472; --linearHeight: 148px; --linearDegree: 20%; --linearDelay: 5.1s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 233px; --linearDegree: 27%; --linearDelay: 2.5s;">
+                    </div>
+                    <div class="linear-item"
+                        style="--linearColor: #f8b73b; --linearHeight: 121px; --linearDegree: 41%; --linearDelay: 2.7s;">
+                    </div>
+                    <div class="linear-image thunder_green"
+                        style="--linearColor: #f8b73b; --linearHeight: 180px; --linearDegree: 34%; --linearDelay: 2.0s; --linearImageTop: 39%;">
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-bg" style="background-position: 55% 0px;"></div>
+            <div class="mirrorball"></div>
+            <div class="line-bg"></div>
+            <div class="speaker"></div>
+            <div class="stream">
+                <div class="stream-inner">
+                    <div class="stream-item" style="--streamDegree: 5%; --streamDelay: 0.1s;"></div>
+                    <div class="stream-item" style="--streamDegree: 10%; --streamDelay: 1.3s;"></div>
+                    <div class="stream-item" style="--streamDegree: 15%; --streamDelay: 1.3s;"></div>
+                    <div class="stream-item" style="--streamDegree: 20%; --streamDelay: 0.4s;"></div>
+                    <div class="stream-item" style="--streamDegree: 25%; --streamDelay: 0.1s;"></div>
+                    <div class="stream-item" style="--streamDegree: 30%; --streamDelay: 1.5s;"></div>
+                    <div class="stream-item" style="--streamDegree: 35%; --streamDelay: 1.3s;"></div>
+                    <div class="stream-item" style="--streamDegree: 40%; --streamDelay: 0.6s;"></div>
+                    <div class="stream-item" style="--streamDegree: 45%; --streamDelay: 1.8s;"></div>
+                    <div class="stream-item" style="--streamDegree: 46%; --streamDelay: 0.9s;"></div>
+                    <div class="stream-item" style="--streamDegree: 55%; --streamDelay: 1.4s;"></div>
+                    <div class="stream-item" style="--streamDegree: 60%; --streamDelay: 0.5s;"></div>
+                    <div class="stream-item" style="--streamDegree: 65%; --streamDelay: 1.4s;"></div>
+                    <div class="stream-item" style="--streamDegree: 70%; --streamDelay: 0.9s;"></div>
+                    <div class="stream-item" style="--streamDegree: 75%; --streamDelay: 1.0s;"></div>
+                    <div class="stream-item" style="--streamDegree: 80%; --streamDelay: 2.0s;"></div>
+                    <div class="stream-item" style="--streamDegree: 85%; --streamDelay: 0.5s;"></div>
+                    <div class="stream-item" style="--streamDegree: 90%; --streamDelay: 1.5s;"></div>
+                    <div class="stream-item" style="--streamDegree: 95%; --streamDelay: 0.9s;"></div>
+                    <div class="stream-item" style="--streamDegree: 100%; --streamDelay: 1.2s;"></div>
+                </div>
+            </div> &gt;
+        </div>
+        <footer>
+            <maiPageUp/>
+            <div class="Footer"><button class="pageup hide" id="maiPageUp"></button>
+                <div class="Footer-inner">
+                    <div class="Footer-inner-text">
+                        <small>©AnimeMangaFan</small><br>
+                        <small>©沧州交通学院</small><br>
+                        <small>©北京交通大学海滨学院</small><br>
+                        <small><a href="http://beian.miit.gov.cn" target="_blank">京ICP备20031765号-3</a></small><br>
+                        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010802039846\" rel="noreferrer\" target="_blank\">
+                            <img class="logos" src="./assets/beian.png" style="width: 12px;">京公网安备11010802039846</a><br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="Footer-inner-sega"><a href="./" target="_blank">AnimeMangaFan动漫协会</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./lib/pageup.js?20240208" defer=""></script>
+    <script src="./lib/site.js?20240126" defer=""></script>
+    <script src="./root/root.js?20240126" defer=""></script>
+
+    <div mqd=""></div>
+    <script type="text/javascript"
+        id="">!function () { var b = null, a = window.location, d = a.search.substr(1).split(/&/).filter(function (c) { c = c.split(/=/); return "_mkd" === c[0] ? (b = c[1] || "", !1) : !0 }); null !== b && (0 === b.length ? localStorage.removeItem("mkdId") : localStorage.setItem("mkdId", b), d = d.join("\x26"), a = a.protocol + "//" + a.hostname + (a.port ? ":" + a.port : "") + a.pathname + (d ? "?" + d : "") + a.hash, history.replaceState(null, null, a)) }();</script>
+    <i id="__PIKPAK_EXTENSION__" style="display: none;"></i>
+</body>
+
+</html>
